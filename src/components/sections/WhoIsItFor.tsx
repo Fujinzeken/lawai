@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import {
   Briefcase,
   Users,
@@ -9,50 +10,52 @@ import {
   GraduationCap,
 } from "lucide-react";
 
-const personas = [
-  {
-    icon: Briefcase,
-    title: "Entrepreneurs",
-    desc: "Navigate contracts, business law, and compliance.",
-    accentBorder: "border-t-amber-400",
-    iconBg: "bg-amber-50",
-    iconColor: "text-amber-600",
-  },
-  {
-    icon: Users,
-    title: "Employees",
-    desc: "Understand workplace rights, disputes, and terms.",
-    accentBorder: "border-t-blue-400",
-    iconBg: "bg-blue-50",
-    iconColor: "text-blue-600",
-  },
-  {
-    icon: Building2,
-    title: "Small businesses",
-    desc: "Get clarity on regulations, permits, and obligations.",
-    accentBorder: "border-t-emerald-400",
-    iconBg: "bg-emerald-50",
-    iconColor: "text-emerald-600",
-  },
-  {
-    icon: UserCheck,
-    title: "Tenants & landlords",
-    desc: "Know your rights on leases, deposits, and property.",
-    accentBorder: "border-t-violet-400",
-    iconBg: "bg-violet-50",
-    iconColor: "text-violet-600",
-  },
-  {
-    icon: GraduationCap,
-    title: "Students",
-    desc: "Learn about your consumer, tenant, and academic rights.",
-    accentBorder: "border-t-rose-400",
-    iconBg: "bg-rose-50",
-    iconColor: "text-rose-600",
-  },
-];
-
 export default function WhoIsItFor() {
+  const t = useTranslations("WhoIsItFor");
+
+  const personas = [
+    {
+      icon: Briefcase,
+      title: t("items.p1.title"),
+      desc: t("items.p1.desc"),
+      accentBorder: "border-t-amber-400",
+      iconBg: "bg-amber-50",
+      iconColor: "text-amber-600",
+    },
+    {
+      icon: Users,
+      title: t("items.p2.title"),
+      desc: t("items.p2.desc"),
+      accentBorder: "border-t-blue-400",
+      iconBg: "bg-blue-50",
+      iconColor: "text-blue-600",
+    },
+    {
+      icon: Building2,
+      title: t("items.p3.title"),
+      desc: t("items.p3.desc"),
+      accentBorder: "border-t-emerald-400",
+      iconBg: "bg-emerald-50",
+      iconColor: "text-emerald-600",
+    },
+    {
+      icon: UserCheck,
+      title: t("items.p4.title"),
+      desc: t("items.p4.desc"),
+      accentBorder: "border-t-violet-400",
+      iconBg: "bg-violet-50",
+      iconColor: "text-violet-600",
+    },
+    {
+      icon: GraduationCap,
+      title: t("items.p5.title"),
+      desc: t("items.p5.desc"),
+      accentBorder: "border-t-rose-400",
+      iconBg: "bg-rose-50",
+      iconColor: "text-rose-600",
+    },
+  ];
+
   return (
     <section
       id="who-it-for"
@@ -83,14 +86,14 @@ export default function WhoIsItFor() {
           className="text-center mb-16"
         >
           <span className="section-label mb-4 justify-center">
-            Who it&apos;s for
+            {t("label")}
           </span>
           <h2 className="font-heading text-4xl md:text-5xl font-bold mt-4 mb-4 text-navy-950">
-            Made for <span className="gradient-text">everyone</span>
+            {t("titlePrefix")}{" "}
+            <span className="gradient-text">{t("titleSuffix")}</span>
           </h2>
           <p className="text-navy-600 text-lg max-w-lg mx-auto">
-            Whether you&apos;re an employee or a business owner, LawAI gives you
-            clarity.
+            {t("description")}
           </p>
         </motion.div>
 
@@ -112,13 +115,7 @@ export default function WhoIsItFor() {
   );
 }
 
-function PersonaCard({
-  persona: p,
-  delay,
-}: {
-  persona: (typeof personas)[0];
-  delay: number;
-}) {
+function PersonaCard({ persona: p, delay }: { persona: any; delay: number }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}

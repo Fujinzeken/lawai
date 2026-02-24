@@ -1,0 +1,269 @@
+{
+  "Navbar": {
+    "links": {
+      "problem": "Muammo",
+      "howItWorks": "Qanday ishlaydi",
+      "features": "Imkoniyatlar",
+      "whoItFor": "Kimlar uchun",
+      "faq": "Savollar"
+    },
+    "logo": {
+      "law": "Law",
+      "ai": "AI"
+    },
+    "cta": "Savol berish",
+    "languages": {
+      "en": "English",
+      "ru": "Русский",
+      "uz": "O'zbekcha"
+    }
+  },
+  "Hero": {
+    "label": "Sun'iy intellekt asosidagi huquqiy yordamchi",
+    "title1": "Advokatni",
+    "title2": "kutib o'tirmang.",
+    "title3": "Javoblarni",
+    "title4": "darhol oling.",
+    "description": "Qonunlarni oddiy tilda tushuntirib beruvchi 24/7 ishlovchi SI yordamchisi. Hoziroq so'rang va darhol tushunib oling.",
+    "ctaAsk": "Savol berish",
+    "ctaHow": "Qanday ishlaydi",
+    "footerText": "Navbatlarsiz · Kutishlarsiz · Murakkab yuridik tilsiz",
+    "stats": {
+      "response": {
+        "value": "~30s",
+        "label": "O'rtacha javob"
+      },
+      "availability": {
+        "value": "24/7",
+        "label": "Mavjudlik"
+      },
+      "confidential": {
+        "value": "100%",
+        "label": "Maxfiy"
+      }
+    },
+    "chat": {
+      "popularQuestions": {
+        "q1": "Ushbu jarimani qanday bekor qilsam bo'ladi?",
+        "q2": "Ijarachining qanday huquqlari bor?",
+        "q3": "Ushbu shartnoma qanchalik qonuniy?"
+      },
+      "headerName": "LawAI Yordamchisi",
+      "headerStatus": "Onlayn",
+      "userMessage": "Menga o'zim rozi bo'lmagan jarima keldi. Nima qilishim kerak?",
+      "aiMessageTitle": "Jarimani bekor qilish bo'yicha qadamlar:",
+      "aiSteps": {
+        "step1": "Shikoyat qilish muddatini tekshiring (14–28 kun)",
+        "step2": "Tasdiqlovchi dalillarni to'plang",
+        "step3": "Rasmiy ariza topshiring"
+      },
+      "aiFooter": "{count} ta modda tahlil qilindi · {time}s",
+      "inputPlaceholder": "Yuridik savol bering..."
+    },
+    "trust": {
+      "encryption": "To'liq shifrlangan",
+      "law": "O'zbekiston qonunchiligiga asoslangan"
+    }
+  },
+  "Problem": {
+    "label": "Muammo",
+    "title": "<legalQuestion>Yuridik savol</legalQuestion> tug'ilganda nima qilasiz?",
+    "legalQuestion": "yuridik savol",
+    "description": "Ko'p odamlar Google-dan qidiradi, do'stlaridan so'raydi yoki yuristga yozilishga harakat qiladi. Bu usullarning hech biri tez va ishonchli javob bermaydi.",
+    "stat": {
+      "value": "73%",
+      "label": "odamlar internetdan yuridik javob topishdan voz kechishadi"
+    },
+    "painPoints": {
+      "p1": {
+        "text": "Google chalkash va bir-biriga zid maqolalarni chiqaradi",
+        "detail": "10 ta ochiq tab va hali ham aniq javob yo'q"
+      },
+      "p2": {
+        "text": "Yuristlar kunlab — hatto haftalab javob bermaydi",
+        "detail": "Bu vaqtda esa oxirgi muddat yaqinlashib kelmoqda"
+      },
+      "p3": {
+        "text": "Oddiy maslahat yuzlab dollarga tushishi mumkin",
+        "detail": "Faqatgina 'vaziyatga qarab' degan gapni eshitish uchun"
+      }
+    },
+    "worseText": "Ba'zida kutish vaziyatni yanada og'irlashtiradi.",
+    "footer": {
+      "title": "LawAI bilan siz javoblarni <span>{time}</span> ichida olasiz",
+      "time": "~30 soniya",
+      "description": "Aniq, tizimli va O'zbekiston qonunchiligiga asoslangan.",
+      "badges": {
+        "confidential": "Maxfiy",
+        "accurate": "Aniq",
+        "instant": "Darhol"
+      }
+    },
+    "cta": "Hoziroq sinab ko'ring"
+  },
+  "Solution": {
+    "label": "Qanday ishlaydi",
+    "titlePrefix": "Oddiy. Tez.",
+    "titleSuffix": "Aniq.",
+    "description": "Savoldan aniqlikkacha - uchta qadamda.",
+    "steps": {
+      "step1": {
+        "title": "Savolingizni bering",
+        "desc": "Shunchaki nima kerakligini oddiy tilda yozing — yuridik atamalarsiz. Go'yoki qonunni yaxshi biladigan aqlli do'stingizga yozayotgandek."
+      },
+      "step2": {
+        "title": "SI qonunlarni tahlil qiladi",
+        "desc": "Bizning tizimimiz aynan sizning holatingizga tegishli bo'lgan minglab qonun, modda va pretsedentlarni real vaqtda skanerlaydi."
+      },
+      "step3": {
+        "title": "Aniq ko'rsatma oling",
+        "desc": "Siz tegishli qonunlarga havolalar bilan oddiy tilda yozilgan, qadam-baqadam tuzilgan javobni olasiz — harakat qilishga tayyor holda."
+      }
+    },
+    "benefits": {
+      "b1": "Murakkab atamalarsiz",
+      "b2": "Ortiqcha uchrashuvlarsiz",
+      "b3": "Faqat aniqlik"
+    },
+    "cta": "Hoziroq sinab ko'ring"
+  },
+  "Features": {
+    "label": "Imkoniyatlar",
+    "titlePrefix": "Nima uchun",
+    "titleSuffix": "LawAI?",
+    "description": "Darhol yuridik aniqlikka muhtoj insonlar uchun yaratilgan.",
+    "items": {
+      "f1": {
+        "title": "Kontekstni tushunadi",
+        "desc": "Bizning SI nafaqat kalit so'zlarni, balki savolingiz orqasidagi nozik jihatlarni ham anglaydi. O'z so'zlaringiz bilan so'rang — u tushunadi."
+      },
+      "f2": {
+        "title": "100% maxfiy",
+        "desc": "Savollaringiz va ma'lumotlaringiz shifrlangan va hech qachon hech kimga ulashilmaydi. Har doim to'liq maxfiylik."
+      },
+      "f3": {
+        "title": "24/7 mavjud",
+        "desc": "Yuridik savollar ish soatlarini kutib o'tirmaydi. Biz ham. Istalgan vaqtda va istalgan joyda javob oling."
+      },
+      "f4": {
+        "title": "Har doim dolzarb",
+        "desc": "Eng so'nggi qonunchilik va o'zgartirishlar bilan doimiy yangilanib turadi. Hech qachon eskirgan maslahat olmaysiz."
+      },
+      "f5": {
+        "title": "Oddiy til",
+        "desc": "Yuridik jargonlarsiz — javoblar barcha tushunishi uchun yoziladi. Murakkablikdan ko'ra aniqlik afzal."
+      },
+      "f6": {
+        "title": "Muloqot orqali qo'llab-quvvatlash",
+        "desc": "Tushuntirish kerakmi? Yaxshiroq tushunish uchun qo'shimcha savollar bering. Haqiqiy suhbat kabi."
+      }
+    }
+  },
+  "WhoIsItFor": {
+    "label": "Kimlar uchun",
+    "titlePrefix": "Har bir",
+    "titleSuffix": "inson uchun",
+    "description": "Xodim bo'lasizmi yoki biznes egasi, LawAI sizga aniqlik beradi.",
+    "items": {
+      "p1": {
+        "title": "Tadbirkorlar",
+        "desc": "Shartnomalar, biznes huquqi va qonunbuzarliklar bilan tanishing."
+      },
+      "p2": {
+        "title": "Xodimlar",
+        "desc": "Mehnat huquqlaringiz, nizolar va ish shartlarini tushunib oling."
+      },
+      "p3": {
+        "title": "Kichik biznes",
+        "desc": "Qoidalar, ruxsatnomalar va majburiyatlar bo'yicha aniqlik oling."
+      },
+      "p4": {
+        "title": "Ijarachilar va mulkdorlar",
+        "desc": "Ijara, depozitlar va ko'chmas mulk bo'yicha huquqlaringizni biling."
+      },
+      "p5": {
+        "title": "Talabalar",
+        "desc": "Iste'molchi, ijarachi va akademik huquqlaringiz haqida bilib oling."
+      }
+    }
+  },
+  "TrustBanner": {
+    "stats": {
+      "s1": "Savollarga javob berildi",
+      "s2": "O'rtacha javob vaqti",
+      "s3": "Foydalanuvchi roziligi",
+      "s4": "Faol foydalanuvchilar"
+    }
+  },
+  "Emotional": {
+    "title": "Qonun sizni chalkashtirmasligi,\n<protect>himoya qilishi</protect>\nkerak.",
+    "protect": "himoya qilishi",
+    "description": "Har bir inson o'z huquqlarini tushunishga loyiq. Biz yuridik murakkabliklarni darhol aniq va amaliy ko'rsatmalarga aylantiramiz."
+  },
+  "FAQ": {
+    "label": "FAQ",
+    "titlePrefix": "Savollaringiz",
+    "titleSuffix": " bormi?",
+    "description": "LawAI haqida ko'p beriladigan savollarga javoblar. Kerakli ma'lumotni topa olmadingizmi? Bizdan to'g'ridan-to'g'ri so'rang.",
+    "card": {
+      "title": "Hali ham savollaringiz bormi?",
+      "description": "Bizning SI yordamchimiz 24/7 mavjud. Istalgan yuridik savolni bering va darhol aniq javob oling.",
+      "cta": "Hoziroq so'rang"
+    },
+    "items": {
+      "q1": {
+        "q": "Javoblar yuridik kuchga egami?",
+        "a": "LawAI amaldagi qonunchilikka asoslangan axborot xizmatini taqdim etadi. Bu qonunni tushunishga yordam bersa-da, sud ishlari uchun rasmiy yuridik maslahat o'rnini bosmaydi."
+      },
+      "q2": {
+        "q": "Qanday turdagi savollarni berishim mumkin?",
+        "a": "Istalgan yuridik savol — mehnat nizolari va ijarachilar huquqlaridan tortib, shartnomalarni ko'rib chiqish, jarimalar va biznes qoidalariigacha."
+      },
+      "q3": {
+        "q": "Qanchalik tez javob olaman?",
+        "a": "Aksariyat savollarga 30 soniya ichida javob beriladi. Murakkab savollar bo'yicha SI bir nechta huquqiy manbalarni tahlil qilishi sababli biroz ko'proq vaqt talab qilinishi mumkin."
+      },
+      "q4": {
+        "q": "Ma'lumotlarim xavfsizmi?",
+        "a": "Albatta. Barcha suhbatlar to'liq shifrlangan. Biz sizning shaxsiy ma'lumotlaringizni sessiya uchun zarur bo'lganidan ortiq saqlamaymiz, sotmaymiz va boshqalarga bermaymiz."
+      },
+      "q5": {
+        "q": "Bu mening mamlakatimda ishlaydimi?",
+        "a": "LawAI hozirda ma'lum yurisdiksiyalar qonunchiligini qamrab oladi. Biz qamrovni jadal kengaytirmoqdamiz — qo'llab-quvvatlanadigan hududlar ro'yxatini tekshirib turing."
+      }
+    }
+  },
+  "FinalCTA": {
+    "badge": "Birinchi savol bepul",
+    "titlePrefix": "Aniq javoblar",
+    "titleSuffix": "olishga tayyormisiz?",
+    "description": "Birinchi yuridik savolingizni bepul bering. Ro'yxatdan o'tishsiz, majburiyatlarsiz.",
+    "ctaAsk": "Savol berish",
+    "ctaHow": "Qanday ishlashini ko'ring →",
+    "checks": {
+      "c1": "Ro'yxatdan o'tish shart emas",
+      "c2": "Birinchi savol bepul",
+      "c3": "Darhol javob"
+    }
+  },
+  "Footer": {
+    "description": "Qonunni oddiy tilda tushuntirib beruvchi SI yordamchisi. 24/7 mavjud, maxfiy va doim dolzarb.",
+    "product": "Mahsulot",
+    "legal": "Yuridik ma'lumotlar",
+    "copyright": "© {year} LawAI. Barcha huquqlar himoyalangan.",
+    "disclaimer": "LawAI yuridik maslahat emas, balki huquqiy ma'lumot taqdim etadi. Majburiy yuridik masalalar bo'yicha har doim malakali advokat bilan maslahatlashing.",
+    "links": {
+      "features": "Imkoniyatlar",
+      "howItWorks": "Qanday ishlaydi",
+      "pricing": "Narxlar",
+      "faq": "FAQ",
+      "tos": "Foydalanish shartlari",
+      "privacy": "Maxfiylik siyosati",
+      "cookie": "Cookie siyosati"
+    }
+  },
+  "Metadata": {
+    "title": "LawAI — 24/7 ishlovchi huquqiy SI yordamchingiz",
+    "description": "O'zbekiston qonunchiligiga asoslangan yuridik savollarga darhol javob oling. Oddiy tilda, maxfiy va har doim mavjud."
+  }
+}

@@ -11,8 +11,11 @@ import {
   Bot,
   ChevronRight,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function Hero() {
+  const t = useTranslations("Hero");
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-warm-50">
       {/* ── Background layers ── */}
@@ -41,7 +44,7 @@ export default function Hero() {
               className="section-label mb-6"
             >
               <Sparkles className="w-3.5 h-3.5" />
-              AI-Powered Legal Assistant
+              {t("label")}
             </motion.div>
 
             <motion.h1
@@ -54,13 +57,13 @@ export default function Hero() {
               }}
               className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 leading-[1.05] text-navy-950"
             >
-              Don&apos;t wait
+              {t("title1")}
               <br />
-              for a lawyer.
+              {t("title2")}
               <br />
-              <span className="gradient-text">Get answers</span>
+              <span className="gradient-text">{t("title3")}</span>
               <br />
-              instantly.
+              {t("title4")}
             </motion.h1>
 
             <motion.p
@@ -73,8 +76,7 @@ export default function Hero() {
               }}
               className="text-lg text-navy-600 mb-10 max-w-md leading-relaxed"
             >
-              24/7 AI-powered legal assistant that explains the law in simple
-              language. Ask now, understand immediately.
+              {t("description")}
             </motion.p>
 
             <motion.div
@@ -88,17 +90,19 @@ export default function Hero() {
               className="flex flex-col sm:flex-row items-start gap-4 mb-4"
             >
               <a
-                href="#"
+                href="https://t.me/aiqonun_bot"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary px-10 py-4 rounded-full text-base flex items-center gap-2 group"
               >
-                Ask Your Question
+                {t("ctaAsk")}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
                 href="#how-it-works"
                 className="btn-secondary px-10 py-4 rounded-full text-base flex items-center gap-2"
               >
-                How It Works
+                {t("ctaHow")}
               </a>
             </motion.div>
 
@@ -108,7 +112,7 @@ export default function Hero() {
               transition={{ delay: 0.8 }}
               className="text-xs text-navy-600/60 font-medium"
             >
-              No appointments · No waiting · No complicated legal language
+              {t("footerText")}
             </motion.p>
 
             {/* Stats */}
@@ -119,9 +123,18 @@ export default function Hero() {
               className="mt-12 flex gap-10"
             >
               {[
-                { value: "~30s", label: "Avg response" },
-                { value: "24/7", label: "Availability" },
-                { value: "100%", label: "Confidential" },
+                {
+                  value: t("stats.response.value"),
+                  label: t("stats.response.label"),
+                },
+                {
+                  value: t("stats.availability.value"),
+                  label: t("stats.availability.label"),
+                },
+                {
+                  value: t("stats.confidential.value"),
+                  label: t("stats.confidential.label"),
+                },
               ].map(({ value, label }) => (
                 <div key={label}>
                   <div className="text-2xl font-heading font-bold text-navy-950">
@@ -160,9 +173,9 @@ export default function Hero() {
               className="hidden lg:flex flex-wrap gap-2 mb-4 justify-center"
             >
               {[
-                "Can I contest this fine?",
-                "What are my tenant rights?",
-                "Is this contract valid?",
+                t("chat.popularQuestions.q1"),
+                t("chat.popularQuestions.q2"),
+                t("chat.popularQuestions.q3"),
               ].map((q, i) => (
                 <motion.div
                   key={q}
@@ -198,11 +211,11 @@ export default function Hero() {
                   </div>
                   <div>
                     <div className="text-sm font-semibold text-white">
-                      LawAI Assistant
+                      {t("chat.headerName")}
                     </div>
                     <div className="text-[10px] text-emerald-400 flex items-center gap-1 mt-0.5 font-medium">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                      Online
+                      {t("chat.headerStatus")}
                     </div>
                   </div>
                 </div>
@@ -222,7 +235,7 @@ export default function Hero() {
                   className="flex justify-end"
                 >
                   <div className="bg-amber-500/20 text-amber-200 px-4 py-2.5 rounded-2xl rounded-tr-sm text-sm max-w-[85%] leading-relaxed border border-amber-500/10">
-                    I received a fine I don&apos;t agree with. What should I do?
+                    {t("chat.userMessage")}
                   </div>
                 </motion.div>
 
@@ -234,13 +247,13 @@ export default function Hero() {
                 >
                   <div className="bg-white/[0.06] px-4 py-3.5 rounded-2xl rounded-tl-sm max-w-[90%] border border-white/[0.06]">
                     <p className="text-sm text-white/90 font-medium mb-2.5">
-                      Here are the steps to contest your fine:
+                      {t("chat.aiMessageTitle")}
                     </p>
                     <div className="space-y-2">
                       {[
-                        "Check the appeal deadline (14–28 days)",
-                        "Gather supporting evidence",
-                        "Submit a formal letter of representation",
+                        t("chat.aiSteps.step1"),
+                        t("chat.aiSteps.step2"),
+                        t("chat.aiSteps.step3"),
                       ].map((step, i) => (
                         <motion.div
                           key={step}
@@ -268,7 +281,7 @@ export default function Hero() {
                         ))}
                       </div>
                       <span className="text-[10px] text-white/40 italic">
-                        Analyzed 3 relevant articles · 0.8s
+                        {t("chat.aiFooter", { count: 3, time: "0.8" })}
                       </span>
                     </div>
                   </div>
@@ -279,7 +292,7 @@ export default function Hero() {
               <div className="px-5 pb-4">
                 <div className="flex gap-2.5">
                   <div className="flex-1 bg-white/[0.05] rounded-xl py-2.5 px-4 text-sm text-white/30 border border-white/[0.05]">
-                    Ask a legal question...
+                    {t("chat.inputPlaceholder")}
                   </div>
                   <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center shrink-0 cursor-pointer hover:shadow-lg hover:shadow-amber-500/30 transition-all duration-300">
                     <ArrowRight className="w-4 h-4 text-white" />
@@ -296,8 +309,8 @@ export default function Hero() {
               className="mt-6 flex items-center justify-center gap-6"
             >
               {[
-                { Icon: Shield, text: "End-to-end encrypted" },
-                { Icon: Scale, text: "Based on current law" },
+                { Icon: Shield, text: t("trust.encryption") },
+                { Icon: Scale, text: t("trust.law") },
               ].map(({ Icon, text }) => (
                 <div
                   key={text}

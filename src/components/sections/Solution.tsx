@@ -2,38 +2,41 @@
 
 import { motion } from "framer-motion";
 import { Send, Cpu, CheckCircle, ArrowRight, Zap } from "lucide-react";
-
-const steps = [
-  {
-    num: "01",
-    title: "Ask your question",
-    desc: "Just type what you need in plain language — no legal terms, no forms. Like texting a smart friend who happens to know the law.",
-    icon: Send,
-    color: "bg-blue-50 text-blue-600",
-    borderColor: "border-t-blue-400",
-    glowHover: "hover:shadow-blue-200/40",
-  },
-  {
-    num: "02",
-    title: "AI analyzes legislation",
-    desc: "Our engine scans thousands of laws, articles, and precedents in real time to find exactly what applies to your situation.",
-    icon: Cpu,
-    color: "bg-violet-50 text-violet-600",
-    borderColor: "border-t-violet-400",
-    glowHover: "hover:shadow-violet-200/40",
-  },
-  {
-    num: "03",
-    title: "Get clear guidance",
-    desc: "You receive a structured, step-by-step answer in plain language with references to the relevant laws — ready to act on.",
-    icon: CheckCircle,
-    color: "bg-emerald-50 text-emerald-600",
-    borderColor: "border-t-emerald-400",
-    glowHover: "hover:shadow-emerald-200/40",
-  },
-];
+import { useTranslations } from "next-intl";
 
 export default function Solution() {
+  const t = useTranslations("Solution");
+
+  const steps = [
+    {
+      num: "01",
+      title: t("steps.step1.title"),
+      desc: t("steps.step1.desc"),
+      icon: Send,
+      color: "bg-blue-50 text-blue-600",
+      borderColor: "border-t-blue-400",
+      glowHover: "hover:shadow-blue-200/40",
+    },
+    {
+      num: "02",
+      title: t("steps.step2.title"),
+      desc: t("steps.step2.desc"),
+      icon: Cpu,
+      color: "bg-violet-50 text-violet-600",
+      borderColor: "border-t-violet-400",
+      glowHover: "hover:shadow-violet-200/40",
+    },
+    {
+      num: "03",
+      title: t("steps.step3.title"),
+      desc: t("steps.step3.desc"),
+      icon: CheckCircle,
+      color: "bg-emerald-50 text-emerald-600",
+      borderColor: "border-t-emerald-400",
+      glowHover: "hover:shadow-emerald-200/40",
+    },
+  ];
+
   return (
     <section
       id="how-it-works"
@@ -83,13 +86,14 @@ export default function Solution() {
           className="text-center mb-20"
         >
           <span className="section-label mb-4 justify-center">
-            How it works
+            {t("label")}
           </span>
           <h2 className="font-heading text-4xl md:text-5xl font-bold mt-4 mb-4 text-navy-950">
-            Simple. Fast. <span className="gradient-text">Clear.</span>
+            {t("titlePrefix")}{" "}
+            <span className="gradient-text">{t("titleSuffix")}</span>
           </h2>
           <p className="text-navy-600 text-lg max-w-lg mx-auto">
-            From question to clarity in three steps.
+            {t("description")}
           </p>
         </motion.div>
 
@@ -143,19 +147,17 @@ export default function Solution() {
           viewport={{ once: true }}
           className="mt-16 flex flex-wrap items-center justify-center gap-4"
         >
-          {[
-            "No complicated terms",
-            "No unnecessary meetings",
-            "Just clarity",
-          ].map((benefit) => (
-            <div
-              key={benefit}
-              className="glass inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-xs font-semibold text-navy-700"
-            >
-              <Zap className="w-3.5 h-3.5 text-amber-500" />
-              {benefit}
-            </div>
-          ))}
+          {[t("benefits.b1"), t("benefits.b2"), t("benefits.b3")].map(
+            (benefit) => (
+              <div
+                key={benefit}
+                className="glass inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-xs font-semibold text-navy-700"
+              >
+                <Zap className="w-3.5 h-3.5 text-amber-500" />
+                {benefit}
+              </div>
+            ),
+          )}
         </motion.div>
 
         {/* CTA */}
@@ -166,10 +168,12 @@ export default function Solution() {
           className="mt-10 text-center"
         >
           <a
-            href="#"
+            href="https://t.me/aiqonun_bot"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-primary inline-flex items-center gap-2 px-10 py-4 rounded-full text-base group"
           >
-            Try It Now
+            {t("cta")}
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
         </motion.div>

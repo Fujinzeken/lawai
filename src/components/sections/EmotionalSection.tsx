@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export default function EmotionalSection() {
+  const t = useTranslations("Emotional");
+
   return (
     <section className="py-32 bg-navy-950 text-white relative overflow-hidden">
       {/* Layered ambient glows */}
@@ -23,17 +26,17 @@ export default function EmotionalSection() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="text-center max-w-4xl mx-auto"
         >
-          <h2 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.08] mb-8">
-            The law should
-            <br />
-            <span className="bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 bg-clip-text text-transparent">
-              protect you,
-            </span>{" "}
-            not confuse you.
+          <h2 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.08] mb-8 whitespace-pre-line">
+            {t.rich("title", {
+              protect: (chunks) => (
+                <span className="bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 bg-clip-text text-transparent">
+                  {chunks}
+                </span>
+              ),
+            })}
           </h2>
           <p className="text-white/50 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Everyone deserves to understand their rights. We translate legal
-            complexity into clear, actionable guidance — instantly.
+            {t("description")}
           </p>
 
           {/* Signature decorative element — amber gradient line */}

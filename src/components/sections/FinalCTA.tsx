@@ -2,8 +2,13 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Check, Sparkles } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function FinalCTA() {
+  const t = useTranslations("FinalCTA");
+
+  const checkItems = [t("checks.c1"), t("checks.c2"), t("checks.c3")];
+
   return (
     <section className="py-28 bg-warm-50 relative overflow-hidden">
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
@@ -31,45 +36,42 @@ export default function FinalCTA() {
             >
               <Sparkles className="w-3.5 h-3.5 text-amber-400" />
               <span className="text-xs font-semibold text-amber-300 uppercase tracking-wider">
-                Free first question
+                {t("badge")}
               </span>
             </motion.div>
 
             <h2 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[1.1]">
-              Ready to get
+              {t("titlePrefix")}
               <br />
               <span className="bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 bg-clip-text text-transparent">
-                clear answers?
+                {t("titleSuffix")}
               </span>
             </h2>
 
             <p className="text-white/50 text-lg max-w-lg mx-auto mb-10 leading-relaxed">
-              Ask your first legal question for free. No registration, no
-              obligations.
+              {t("description")}
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
               <a
-                href="#"
+                href="https://t.me/aiqonun_bot"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-amber px-10 py-4 rounded-full text-base flex items-center gap-2 group"
               >
-                Ask Your Question
+                {t("ctaAsk")}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
                 href="#how-it-works"
                 className="text-white/50 hover:text-amber-300 text-sm font-medium transition-colors"
               >
-                See how it works →
+                {t("ctaHow")}
               </a>
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-5">
-              {[
-                "No signup required",
-                "Free first question",
-                "Instant answer",
-              ].map((item) => (
+              {checkItems.map((item) => (
                 <div
                   key={item}
                   className="flex items-center gap-1.5 text-xs text-white/35 font-medium"

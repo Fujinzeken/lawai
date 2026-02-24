@@ -4,6 +4,8 @@ import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect } from "react";
 import { MessageSquare, Clock, ThumbsUp, TrendingUp } from "lucide-react";
 
+import { useTranslations } from "next-intl";
+
 function AnimatedCounter({
   target,
   suffix = "",
@@ -30,47 +32,49 @@ function AnimatedCounter({
   return <motion.span>{rounded}</motion.span>;
 }
 
-const stats = [
-  {
-    icon: MessageSquare,
-    value: 50000,
-    suffix: "+",
-    label: "Questions answered",
-    color: "text-blue-400",
-    bg: "bg-blue-400/15",
-    glow: "shadow-blue-500/10",
-  },
-  {
-    icon: Clock,
-    value: 30,
-    prefix: "~",
-    suffix: "s",
-    label: "Avg response time",
-    color: "text-emerald-400",
-    bg: "bg-emerald-400/15",
-    glow: "shadow-emerald-500/10",
-  },
-  {
-    icon: ThumbsUp,
-    value: 98,
-    suffix: "%",
-    label: "User satisfaction",
-    color: "text-amber-400",
-    bg: "bg-amber-400/15",
-    glow: "shadow-amber-500/10",
-  },
-  {
-    icon: TrendingUp,
-    value: 15000,
-    suffix: "+",
-    label: "Active users",
-    color: "text-violet-400",
-    bg: "bg-violet-400/15",
-    glow: "shadow-violet-500/10",
-  },
-];
-
 export default function TrustBanner() {
+  const t = useTranslations("TrustBanner");
+
+  const stats = [
+    {
+      icon: MessageSquare,
+      value: 50000,
+      suffix: "+",
+      label: t("stats.s1"),
+      color: "text-blue-400",
+      bg: "bg-blue-400/15",
+      glow: "shadow-blue-500/10",
+    },
+    {
+      icon: Clock,
+      value: 30,
+      prefix: "~",
+      suffix: "s",
+      label: t("stats.s2"),
+      color: "text-emerald-400",
+      bg: "bg-emerald-400/15",
+      glow: "shadow-emerald-500/10",
+    },
+    {
+      icon: ThumbsUp,
+      value: 98,
+      suffix: "%",
+      label: t("stats.s3"),
+      color: "text-amber-400",
+      bg: "bg-amber-400/15",
+      glow: "shadow-amber-500/10",
+    },
+    {
+      icon: TrendingUp,
+      value: 15000,
+      suffix: "+",
+      label: t("stats.s4"),
+      color: "text-violet-400",
+      bg: "bg-violet-400/15",
+      glow: "shadow-violet-500/10",
+    },
+  ];
+
   return (
     <section className="relative overflow-hidden bg-navy-950 py-20">
       {/* Layered background */}

@@ -3,18 +3,21 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Scale, Menu, X } from "lucide-react";
-
-const navLinks = [
-  { name: "Problem", href: "#problem" },
-  { name: "How It Works", href: "#how-it-works" },
-  { name: "Features", href: "#features" },
-  { name: "Who It's For", href: "#who-it-for" },
-  { name: "FAQ", href: "#faq" },
-];
+import { useTranslations } from "next-intl";
+import LanguageSwitcher from "../LanguageSwitcher";
 
 export default function Navbar() {
+  const t = useTranslations("Navbar");
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const navLinks = [
+    { name: t("links.problem"), href: "#problem" },
+    { name: t("links.howItWorks"), href: "#how-it-works" },
+    { name: t("links.features"), href: "#features" },
+    { name: t("links.whoItFor"), href: "#who-it-for" },
+    { name: t("links.faq"), href: "#faq" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -37,33 +40,47 @@ export default function Navbar() {
             <Scale className="text-amber-400 w-5 h-5" />
           </div>
           <span className="text-xl font-heading font-bold tracking-tight text-navy-950">
-            Law<span className="text-amber-600">AI</span>
+            {t("logo.law")}
+            <span className="text-amber-600">{t("logo.ai")}</span>
           </span>
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
+        <div className="hidden md:flex items-center gap-6">
+          <div className="flex items-center gap-8 mr-2">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-sm font-medium text-navy-700 hover:text-amber-600 transition-colors duration-300"
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
+          <div className="flex items-center gap-4">
+            <LanguageSwitcher />
             <a
-              key={link.name}
-              href={link.href}
-              className="text-sm font-medium text-navy-700 hover:text-amber-600 transition-colors duration-300"
+              href="https://t.me/aiqonun_bot"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary px-6 py-2.5 rounded-full text-sm"
             >
-              {link.name}
+              {t("cta")}
             </a>
-          ))}
-          <a href="#" className="btn-primary px-6 py-2.5 rounded-full text-sm">
-            Ask Your Question
-          </a>
+          </div>
         </div>
 
-        {/* Mobile */}
-        <button
-          className="md:hidden text-navy-800 p-2"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X /> : <Menu />}
-        </button>
+        {/* Mobile Nav Trigger */}
+        <div className="md:hidden flex items-center gap-3">
+          <LanguageSwitcher />
+          <button
+            className="text-navy-800 p-2"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X /> : <Menu />}
+          </button>
+        </div>
       </div>
 
       <AnimatePresence>
@@ -86,11 +103,13 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="#"
+                href="https://t.me/aiqonun_bot"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="btn-primary w-full py-3 rounded-xl text-center text-sm"
               >
-                Ask Your Question
+                {t("cta")}
               </a>
             </div>
           </motion.div>

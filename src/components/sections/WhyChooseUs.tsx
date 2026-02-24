@@ -9,65 +9,68 @@ import {
   Languages,
   MessageSquare,
 } from "lucide-react";
-
-const features = [
-  {
-    icon: Brain,
-    title: "Understands context",
-    desc: "Our AI grasps the nuance behind your question, not just keywords. Ask in your own words — it gets it.",
-    bg: "bg-blue-50",
-    border: "border-blue-100",
-    iconColor: "text-blue-600",
-    glowHover: "hover:shadow-blue-200/50",
-  },
-  {
-    icon: Shield,
-    title: "100% confidential",
-    desc: "Your questions and data are encrypted and never shared with anyone. Full privacy, always.",
-    bg: "bg-emerald-50",
-    border: "border-emerald-100",
-    iconColor: "text-emerald-600",
-    glowHover: "hover:shadow-emerald-200/50",
-  },
-  {
-    icon: Clock,
-    title: "Available 24/7",
-    desc: "Legal questions don't wait for office hours. Neither do we. Get answers anytime, anywhere.",
-    bg: "bg-amber-50",
-    border: "border-amber-100",
-    iconColor: "text-amber-600",
-    glowHover: "hover:shadow-amber-200/50",
-  },
-  {
-    icon: BookOpen,
-    title: "Always up to date",
-    desc: "Constantly updated with the latest legislation and amendments. Never outdated advice.",
-    bg: "bg-violet-50",
-    border: "border-violet-100",
-    iconColor: "text-violet-600",
-    glowHover: "hover:shadow-violet-200/50",
-  },
-  {
-    icon: Languages,
-    title: "Simple language",
-    desc: "No legal jargon — answers written so anyone can understand them. Clarity over complexity.",
-    bg: "bg-rose-50",
-    border: "border-rose-100",
-    iconColor: "text-rose-600",
-    glowHover: "hover:shadow-rose-200/50",
-  },
-  {
-    icon: MessageSquare,
-    title: "Follow-up support",
-    desc: "Need clarification? Ask follow-up questions for deeper understanding. Like a real conversation.",
-    bg: "bg-sky-50",
-    border: "border-sky-100",
-    iconColor: "text-sky-600",
-    glowHover: "hover:shadow-sky-200/50",
-  },
-];
+import { useTranslations } from "next-intl";
 
 export default function WhyChooseUs() {
+  const t = useTranslations("Features");
+
+  const features = [
+    {
+      icon: Brain,
+      title: t("items.f1.title"),
+      desc: t("items.f1.desc"),
+      bg: "bg-blue-50",
+      border: "border-blue-100",
+      iconColor: "text-blue-600",
+      glowHover: "hover:shadow-blue-200/50",
+    },
+    {
+      icon: Shield,
+      title: t("items.f2.title"),
+      desc: t("items.f2.desc"),
+      bg: "bg-emerald-50",
+      border: "border-emerald-100",
+      iconColor: "text-emerald-600",
+      glowHover: "hover:shadow-emerald-200/50",
+    },
+    {
+      icon: Clock,
+      title: t("items.f3.title"),
+      desc: t("items.f3.desc"),
+      bg: "bg-amber-50",
+      border: "border-amber-100",
+      iconColor: "text-amber-600",
+      glowHover: "hover:shadow-amber-200/50",
+    },
+    {
+      icon: BookOpen,
+      title: t("items.f4.title"),
+      desc: t("items.f4.desc"),
+      bg: "bg-violet-50",
+      border: "border-violet-100",
+      iconColor: "text-violet-600",
+      glowHover: "hover:shadow-violet-200/50",
+    },
+    {
+      icon: Languages,
+      title: t("items.f5.title"),
+      desc: t("items.f5.desc"),
+      bg: "bg-rose-50",
+      border: "border-rose-100",
+      iconColor: "text-rose-600",
+      glowHover: "hover:shadow-rose-200/50",
+    },
+    {
+      icon: MessageSquare,
+      title: t("items.f6.title"),
+      desc: t("items.f6.desc"),
+      bg: "bg-sky-50",
+      border: "border-sky-100",
+      iconColor: "text-sky-600",
+      glowHover: "hover:shadow-sky-200/50",
+    },
+  ];
+
   return (
     <section id="features" className="py-28 relative bg-white overflow-hidden">
       {/* Subtle background texture */}
@@ -91,12 +94,15 @@ export default function WhyChooseUs() {
           transition={{ ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-16"
         >
-          <span className="section-label mb-4 justify-center">Features</span>
+          <span className="section-label mb-4 justify-center">
+            {t("label")}
+          </span>
           <h2 className="font-heading text-4xl md:text-5xl font-bold mt-4 mb-4 text-navy-950">
-            Why choose <span className="gradient-text">LawAI?</span>
+            {t("titlePrefix")}{" "}
+            <span className="gradient-text">{t("titleSuffix")}</span>
           </h2>
           <p className="text-navy-600 text-lg max-w-lg mx-auto">
-            Built for people who need real legal clarity, fast.
+            {t("description")}
           </p>
         </motion.div>
 

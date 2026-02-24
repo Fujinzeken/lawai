@@ -1,9 +1,22 @@
 import { Scale, Github, Twitter, Linkedin } from "lucide-react";
-
-const productLinks = ["Features", "How It Works", "Pricing", "FAQ"];
-const legalLinks = ["Terms of Service", "Privacy Policy", "Cookie Policy"];
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations("Footer");
+
+  const productLinks = [
+    { label: t("links.features"), href: "#features" },
+    { label: t("links.howItWorks"), href: "#how-it-works" },
+    { label: t("links.pricing"), href: "#pricing" },
+    { label: t("links.faq"), href: "#faq" },
+  ];
+
+  const legalLinks = [
+    { label: t("links.tos"), href: "#" },
+    { label: t("links.privacy"), href: "#" },
+    { label: t("links.cookie"), href: "#" },
+  ];
+
   return (
     <footer className="bg-navy-950 text-white pt-20 pb-8">
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
@@ -19,8 +32,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-white/50 text-sm leading-relaxed max-w-sm mb-6">
-              AI-powered legal assistant that explains the law in simple
-              language. Available 24/7, confidential, and always up to date.
+              {t("description")}
             </p>
             <div className="flex gap-3">
               {[Twitter, Github, Linkedin].map((Icon, i) => (
@@ -38,16 +50,16 @@ export default function Footer() {
           {/* Product */}
           <div>
             <h4 className="text-xs font-bold uppercase tracking-widest text-white/30 mb-5">
-              Product
+              {t("product")}
             </h4>
             <ul className="space-y-3">
               {productLinks.map((link) => (
-                <li key={link}>
+                <li key={link.label}>
                   <a
-                    href="#"
+                    href={link.href}
                     className="text-sm text-white/50 hover:text-amber-400 transition-colors"
                   >
-                    {link}
+                    {link.label}
                   </a>
                 </li>
               ))}
@@ -57,16 +69,16 @@ export default function Footer() {
           {/* Legal */}
           <div>
             <h4 className="text-xs font-bold uppercase tracking-widest text-white/30 mb-5">
-              Legal
+              {t("legal")}
             </h4>
             <ul className="space-y-3">
               {legalLinks.map((link) => (
-                <li key={link}>
+                <li key={link.label}>
                   <a
-                    href="#"
+                    href={link.href}
                     className="text-sm text-white/50 hover:text-amber-400 transition-colors"
                   >
-                    {link}
+                    {link.label}
                   </a>
                 </li>
               ))}
@@ -77,12 +89,9 @@ export default function Footer() {
         {/* Bottom */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/30">
-            © {new Date().getFullYear()} LawAI. All rights reserved.
+            {t("copyright", { year: new Date().getFullYear() })}
           </p>
-          <p className="text-xs text-white/20">
-            LawAI provides legal information, not legal advice. Always consult a
-            qualified attorney for binding legal matters.
-          </p>
+          <p className="text-xs text-white/20">{t("disclaimer")}</p>
         </div>
       </div>
     </footer>

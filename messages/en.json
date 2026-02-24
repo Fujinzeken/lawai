@@ -1,0 +1,269 @@
+{
+  "Navbar": {
+    "links": {
+      "problem": "Problem",
+      "howItWorks": "How It Works",
+      "features": "Features",
+      "whoItFor": "Who It's For",
+      "faq": "FAQ"
+    },
+    "logo": {
+      "law": "Law",
+      "ai": "AI"
+    },
+    "cta": "Ask Your Question",
+    "languages": {
+      "en": "English",
+      "ru": "Русский",
+      "uz": "O'zbekcha"
+    }
+  },
+  "Hero": {
+    "label": "AI-Powered Legal Assistant",
+    "title1": "Don't wait",
+    "title2": "for a lawyer.",
+    "title3": "Get answers",
+    "title4": "instantly.",
+    "description": "24/7 AI-powered legal assistant that explains the law in simple language. Ask now, understand immediately.",
+    "ctaAsk": "Ask Your Question",
+    "ctaHow": "How It Works",
+    "footerText": "No appointments · No waiting · No complicated legal language",
+    "stats": {
+      "response": {
+        "value": "~30s",
+        "label": "Avg response"
+      },
+      "availability": {
+        "value": "24/7",
+        "label": "Availability"
+      },
+      "confidential": {
+        "value": "100%",
+        "label": "Confidential"
+      }
+    },
+    "chat": {
+      "popularQuestions": {
+        "q1": "Can I contest this fine?",
+        "q2": "What are my tenant rights?",
+        "q3": "Is this contract valid?"
+      },
+      "headerName": "LawAI Assistant",
+      "headerStatus": "Online",
+      "userMessage": "I received a fine I don't agree with. What should I do?",
+      "aiMessageTitle": "Here are the steps to contest your fine:",
+      "aiSteps": {
+        "step1": "Check the appeal deadline (14–28 days)",
+        "step2": "Gather supporting evidence",
+        "step3": "Submit a formal letter of representation"
+      },
+      "aiFooter": "Analyzed {count} relevant articles · {time}s",
+      "inputPlaceholder": "Ask a legal question..."
+    },
+    "trust": {
+      "encryption": "End-to-end encrypted",
+      "law": "Based on Uzbekistan law"
+    }
+  },
+  "Problem": {
+    "label": "The problem",
+    "title": "What do you do when you have a <legalQuestion>legal question</legalQuestion>?",
+    "legalQuestion": "legal question",
+    "description": "Most people turn to Google, ask friends, or try to book a lawyer. None of these give you a fast, reliable answer.",
+    "stat": {
+      "value": "73%",
+      "label": "of people give up searching for legal answers online"
+    },
+    "painPoints": {
+      "p1": {
+        "text": "Google gives you confusing, contradictory articles",
+        "detail": "10 tabs open, still no clear answer"
+      },
+      "p2": {
+        "text": "Lawyers don't respond for days — or weeks",
+        "detail": "Meanwhile, your deadline is approaching"
+      },
+      "p3": {
+        "text": "A simple consultation can cost hundreds",
+        "detail": "Just to hear 'it depends'"
+      }
+    },
+    "worseText": "Sometimes waiting makes things worse.",
+    "footer": {
+      "title": "With LawAI, you get answers in <span>{time}</span>",
+      "time": "~30 seconds",
+      "description": "Clear, structured, based on Uzbekistan legislation.",
+      "badges": {
+        "confidential": "Confidential",
+        "accurate": "Accurate",
+        "instant": "Instant"
+      }
+    },
+    "cta": "Try it now"
+  },
+  "Solution": {
+    "label": "How it works",
+    "titlePrefix": "Simple. Fast.",
+    "titleSuffix": "Clear.",
+    "description": "From question to clarity in three steps.",
+    "steps": {
+      "step1": {
+        "title": "Ask your question",
+        "desc": "Just type what you need in plain language — no legal terms, no forms. Like texting a smart friend who happens to know the law."
+      },
+      "step2": {
+        "title": "AI analyzes legislation",
+        "desc": "Our engine scans thousands of laws, articles, and precedents in real time to find exactly what applies to your situation."
+      },
+      "step3": {
+        "title": "Get clear guidance",
+        "desc": "You receive a structured, step-by-step answer in plain language with references to the relevant laws — ready to act on."
+      }
+    },
+    "benefits": {
+      "b1": "No complicated terms",
+      "b2": "No unnecessary meetings",
+      "b3": "Just clarity"
+    },
+    "cta": "Try It Now"
+  },
+  "Features": {
+    "label": "Features",
+    "titlePrefix": "Why choose",
+    "titleSuffix": "LawAI?",
+    "description": "Built for people who need real legal clarity, fast.",
+    "items": {
+      "f1": {
+        "title": "Understands context",
+        "desc": "Our AI grasps the nuance behind your question, not just keywords. Ask in your own words — it gets it."
+      },
+      "f2": {
+        "title": "100% confidential",
+        "desc": "Your questions and data are encrypted and never shared with anyone. Full privacy, always."
+      },
+      "f3": {
+        "title": "Available 24/7",
+        "desc": "Legal questions don't wait for office hours. Neither do we. Get answers anytime, anywhere."
+      },
+      "f4": {
+        "title": "Always up to date",
+        "desc": "Constantly updated with the latest legislation and amendments. Never outdated advice."
+      },
+      "f5": {
+        "title": "Simple language",
+        "desc": "No legal jargon — answers written so anyone can understand them. Clarity over complexity."
+      },
+      "f6": {
+        "title": "Follow-up support",
+        "desc": "Need clarification? Ask follow-up questions for deeper understanding. Like a real conversation."
+      }
+    }
+  },
+  "WhoIsItFor": {
+    "label": "Who it's for",
+    "titlePrefix": "Made for",
+    "titleSuffix": "everyone",
+    "description": "Whether you're an employee or a business owner, LawAI gives you clarity.",
+    "items": {
+      "p1": {
+        "title": "Entrepreneurs",
+        "desc": "Navigate contracts, business law, and compliance."
+      },
+      "p2": {
+        "title": "Employees",
+        "desc": "Understand workplace rights, disputes, and terms."
+      },
+      "p3": {
+        "title": "Small businesses",
+        "desc": "Get clarity on regulations, permits, and obligations."
+      },
+      "p4": {
+        "title": "Tenants & landlords",
+        "desc": "Know your rights on leases, deposits, and property."
+      },
+      "p5": {
+        "title": "Students",
+        "desc": "Learn about your consumer, tenant, and academic rights."
+      }
+    }
+  },
+  "TrustBanner": {
+    "stats": {
+      "s1": "Questions answered",
+      "s2": "Avg response time",
+      "s3": "User satisfaction",
+      "s4": "Active users"
+    }
+  },
+  "Emotional": {
+    "title": "The law should\n<protect>protect you</protect>,\nnot confuse you.",
+    "protect": "protect you",
+    "description": "Everyone deserves to understand their rights. We translate legal complexity into clear, actionable guidance — instantly."
+  },
+  "FAQ": {
+    "label": "FAQ",
+    "titlePrefix": "Got",
+    "titleSuffix": "questions?",
+    "description": "Here are some common questions about LawAI. Can't find what you need? Just ask us directly.",
+    "card": {
+      "title": "Still have questions?",
+      "description": "Our AI assistant is available 24/7. Ask any legal question and get an instant, clear answer.",
+      "cta": "Ask now"
+    },
+    "items": {
+      "q1": {
+        "q": "Is the advice legally valid?",
+        "a": "LawAI provides informational guidance based on current legislation. While it helps you understand the law, it does not replace formal legal counsel for court proceedings."
+      },
+      "q2": {
+        "q": "What type of questions can I ask?",
+        "a": "Any legal question — from employment disputes and tenant rights to contract reviews, fines, and business compliance."
+      },
+      "q3": {
+        "q": "How fast do I get an answer?",
+        "a": "Most questions are answered within 30 seconds. Complex questions may take slightly longer as the AI analyzes multiple legal sources."
+      },
+      "q4": {
+        "q": "Is my data safe?",
+        "a": "Absolutely. All conversations are encrypted end-to-end. We do not share, sell, or store your personal data beyond what's needed for the session."
+      },
+      "q5": {
+        "q": "Does it work in my country?",
+        "a": "LawAI currently covers legislation for select jurisdictions. We're expanding rapidly — check our supported regions for the latest coverage."
+      }
+    }
+  },
+  "FinalCTA": {
+    "badge": "Free first question",
+    "titlePrefix": "Ready to get",
+    "titleSuffix": "clear answers?",
+    "description": "Ask your first legal question for free. No registration, no obligations.",
+    "ctaAsk": "Ask Your Question",
+    "ctaHow": "See how it works →",
+    "checks": {
+      "c1": "No signup required",
+      "c2": "Free first question",
+      "c3": "Instant answer"
+    }
+  },
+  "Footer": {
+    "description": "AI-powered legal assistant that explains the law in simple language. Available 24/7, confidential, and always up to date.",
+    "product": "Product",
+    "legal": "Legal",
+    "copyright": "© {year} LawAI. All rights reserved.",
+    "disclaimer": "LawAI provides legal information, not legal advice. Always consult a qualified attorney for binding legal matters.",
+    "links": {
+      "features": "Features",
+      "howItWorks": "How It Works",
+      "pricing": "Pricing",
+      "faq": "FAQ",
+      "tos": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "cookie": "Cookie Policy"
+    }
+  },
+  "Metadata": {
+    "title": "LawAI — Your 24/7 AI Legal Assistant",
+    "description": "Get instant answers to your legal questions based on Uzbekistan legislation. Simple language, confidential, and always available."
+  }
+}

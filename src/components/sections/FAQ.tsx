@@ -3,32 +3,34 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { ChevronDown, HelpCircle, ArrowRight } from "lucide-react";
-
-const faqs = [
-  {
-    q: "Is the advice legally valid?",
-    a: "LawAI provides informational guidance based on current legislation. While it helps you understand the law, it does not replace formal legal counsel for court proceedings.",
-  },
-  {
-    q: "What type of questions can I ask?",
-    a: "Any legal question — from employment disputes and tenant rights to contract reviews, fines, and business compliance.",
-  },
-  {
-    q: "How fast do I get an answer?",
-    a: "Most questions are answered within 30 seconds. Complex questions may take slightly longer as the AI analyzes multiple legal sources.",
-  },
-  {
-    q: "Is my data safe?",
-    a: "Absolutely. All conversations are encrypted end-to-end. We do not share, sell, or store your personal data beyond what's needed for the session.",
-  },
-  {
-    q: "Does it work in my country?",
-    a: "LawAI currently covers legislation for select jurisdictions. We're expanding rapidly — check our supported regions for the latest coverage.",
-  },
-];
+import { useTranslations } from "next-intl";
 
 export default function FAQ() {
+  const t = useTranslations("FAQ");
   const [openIndex, setOpenIndex] = useState(0);
+
+  const faqs = [
+    {
+      q: t("items.q1.q"),
+      a: t("items.q1.a"),
+    },
+    {
+      q: t("items.q2.q"),
+      a: t("items.q2.a"),
+    },
+    {
+      q: t("items.q3.q"),
+      a: t("items.q3.a"),
+    },
+    {
+      q: t("items.q4.q"),
+      a: t("items.q4.a"),
+    },
+    {
+      q: t("items.q5.q"),
+      a: t("items.q5.a"),
+    },
+  ];
 
   return (
     <section
@@ -58,13 +60,13 @@ export default function FAQ() {
             className="lg:col-span-2"
           >
             <div className="lg:sticky lg:top-32">
-              <span className="section-label mb-4">FAQ</span>
+              <span className="section-label mb-4">{t("label")}</span>
               <h2 className="font-heading text-4xl md:text-5xl font-bold mt-4 mb-4 text-navy-950">
-                Got <span className="gradient-text">questions?</span>
+                {t("titlePrefix")}{" "}
+                <span className="gradient-text">{t("titleSuffix")}</span>
               </h2>
               <p className="text-navy-600 text-lg leading-relaxed mb-8">
-                Here are some common questions about LawAI. Can&apos;t find what
-                you need? Just ask us directly.
+                {t("description")}
               </p>
 
               {/* Navy card */}
@@ -74,18 +76,19 @@ export default function FAQ() {
                     <HelpCircle className="w-5 h-5 text-amber-400" />
                   </div>
                   <span className="text-white font-heading font-bold text-sm">
-                    Still have questions?
+                    {t("card.title")}
                   </span>
                 </div>
                 <p className="text-white/40 text-xs mb-5 leading-relaxed">
-                  Our AI assistant is available 24/7. Ask any legal question and
-                  get an instant, clear answer.
+                  {t("card.description")}
                 </p>
                 <a
-                  href="#"
+                  href="https://t.me/aiqonun_bot"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-amber px-5 py-2.5 rounded-full text-xs inline-flex items-center gap-1.5 group"
                 >
-                  Ask now
+                  {t("card.cta")}
                   <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                 </a>
               </div>

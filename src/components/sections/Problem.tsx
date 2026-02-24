@@ -10,32 +10,35 @@ import {
   Shield,
   CheckCircle2,
 } from "lucide-react";
-
-const painPoints = [
-  {
-    icon: Search,
-    text: "Google gives you confusing, contradictory articles",
-    detail: "10 tabs open, still no clear answer",
-    iconBg: "bg-rose-50",
-    iconColor: "text-rose-500",
-  },
-  {
-    icon: Clock,
-    text: "Lawyers don't respond for days — or weeks",
-    detail: "Meanwhile, your deadline is approaching",
-    iconBg: "bg-orange-50",
-    iconColor: "text-orange-500",
-  },
-  {
-    icon: Wallet,
-    text: "A simple consultation can cost hundreds",
-    detail: "Just to hear 'it depends'",
-    iconBg: "bg-red-50",
-    iconColor: "text-red-500",
-  },
-];
+import { useTranslations } from "next-intl";
 
 export default function Problem() {
+  const t = useTranslations("Problem");
+
+  const painPoints = [
+    {
+      icon: Search,
+      text: t("painPoints.p1.text"),
+      detail: t("painPoints.p1.detail"),
+      iconBg: "bg-rose-50",
+      iconColor: "text-rose-500",
+    },
+    {
+      icon: Clock,
+      text: t("painPoints.p2.text"),
+      detail: t("painPoints.p2.detail"),
+      iconBg: "bg-orange-50",
+      iconColor: "text-orange-500",
+    },
+    {
+      icon: Wallet,
+      text: t("painPoints.p3.text"),
+      detail: t("painPoints.p3.detail"),
+      iconBg: "bg-red-50",
+      iconColor: "text-red-500",
+    },
+  ];
+
   return (
     <section id="problem" className="relative overflow-hidden">
       {/* ─── Main content area with long gradual white → amber gradient ─── */}
@@ -62,16 +65,16 @@ export default function Problem() {
               viewport={{ once: true }}
               transition={{ ease: [0.22, 1, 0.36, 1] }}
             >
-              <span className="section-label mb-4">The problem</span>
+              <span className="section-label mb-4">{t("label")}</span>
               <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mt-4 mb-6 leading-[1.08] text-navy-950">
-                What do you do
-                <br />
-                when you have a{" "}
-                <span className="gradient-text">legal question?</span>
+                {t.rich("title", {
+                  legalQuestion: (chunks) => (
+                    <span className="gradient-text">{chunks}</span>
+                  ),
+                })}
               </h2>
               <p className="text-navy-600 text-lg leading-relaxed max-w-md mb-10">
-                Most people turn to Google, ask friends, or try to book a
-                lawyer. None of these give you a fast, reliable answer.
+                {t("description")}
               </p>
 
               {/* Amber accent stat */}
@@ -83,10 +86,10 @@ export default function Problem() {
                 className="inline-flex items-center gap-5 bg-navy-950 rounded-2xl px-7 py-5 shadow-glow-navy"
               >
                 <div className="text-4xl font-heading font-bold text-amber-400">
-                  73%
+                  {t("stat.value")}
                 </div>
                 <div className="text-sm text-white/50 leading-snug max-w-[180px]">
-                  of people give up searching for legal answers online
+                  {t("stat.label")}
                 </div>
               </motion.div>
             </motion.div>
@@ -131,7 +134,7 @@ export default function Problem() {
                 transition={{ delay: 0.5 }}
                 className="pt-3 pl-1 text-sm text-rose-500 font-semibold italic"
               >
-                Sometimes waiting makes things worse.
+                {t("worseText")}
               </motion.p>
             </div>
           </div>
@@ -158,11 +161,15 @@ export default function Problem() {
               </div>
               <div>
                 <h3 className="text-white text-xl font-heading font-bold mb-1">
-                  With LawAI, you get answers in{" "}
-                  <span className="text-amber-400">~30 seconds</span>
+                  {t.rich("footer.title", {
+                    time: t("footer.time"),
+                    span: (chunks) => (
+                      <span className="text-amber-400">{chunks}</span>
+                    ),
+                  })}
                 </h3>
                 <p className="text-white/40 text-sm">
-                  Clear, structured, based on current legislation.
+                  {t("footer.description")}
                 </p>
               </div>
             </div>
@@ -170,9 +177,9 @@ export default function Problem() {
             <div className="flex items-center gap-6">
               <div className="hidden md:flex items-center gap-4">
                 {[
-                  { Icon: Shield, label: "Confidential" },
-                  { Icon: CheckCircle2, label: "Accurate" },
-                  { Icon: Clock, label: "Instant" },
+                  { Icon: Shield, label: t("footer.badges.confidential") },
+                  { Icon: CheckCircle2, label: t("footer.badges.accurate") },
+                  { Icon: Clock, label: t("footer.badges.instant") },
                 ].map(({ Icon, label }) => (
                   <div
                     key={label}
@@ -184,10 +191,12 @@ export default function Problem() {
                 ))}
               </div>
               <a
-                href="#"
+                href="https://t.me/aiqonun_bot"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-amber px-8 py-3.5 rounded-full text-sm flex items-center gap-2 group shrink-0"
               >
-                Try it now
+                {t("cta")}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
