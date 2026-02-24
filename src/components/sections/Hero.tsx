@@ -15,17 +15,19 @@ import {
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-warm-50">
-      {/* Subtle background pattern */}
+      {/* ── Background layers ── */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-0 right-0 w-[50%] h-[70%] bg-amber-400/[0.06] blur-[160px] rounded-full" />
-        <div className="absolute bottom-0 left-[10%] w-[40%] h-[50%] bg-navy-800/[0.04] blur-[140px] rounded-full" />
+        {/* Subtle dot grid */}
         <div
-          className="absolute inset-0 opacity-[0.4]"
+          className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: `radial-gradient(circle, #d5cfc3 1px, transparent 1px)`,
+            backgroundImage: `radial-gradient(circle, #d5cfc3 0.8px, transparent 0.8px)`,
             backgroundSize: "32px 32px",
           }}
         />
+        {/* Ambient warm wash */}
+        <div className="absolute top-0 right-0 w-[60%] h-[80%] bg-amber-400/[0.05] blur-[180px] rounded-full" />
+        <div className="absolute bottom-0 left-[10%] w-[40%] h-[50%] bg-navy-800/[0.03] blur-[140px] rounded-full" />
       </div>
 
       <div className="container mx-auto px-6 md:px-12 lg:px-24 pt-28 pb-16">
@@ -35,7 +37,7 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               className="section-label mb-6"
             >
               <Sparkles className="w-3.5 h-3.5" />
@@ -45,7 +47,11 @@ export default function Hero() {
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              transition={{
+                duration: 0.7,
+                delay: 0.1,
+                ease: [0.22, 1, 0.36, 1],
+              }}
               className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 leading-[1.05] text-navy-950"
             >
               Don&apos;t wait
@@ -60,7 +66,11 @@ export default function Hero() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{
+                duration: 0.6,
+                delay: 0.2,
+                ease: [0.22, 1, 0.36, 1],
+              }}
               className="text-lg text-navy-600 mb-10 max-w-md leading-relaxed"
             >
               24/7 AI-powered legal assistant that explains the law in simple
@@ -70,7 +80,11 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              transition={{
+                duration: 0.5,
+                delay: 0.3,
+                ease: [0.22, 1, 0.36, 1],
+              }}
               className="flex flex-col sm:flex-row items-start gap-4 mb-4"
             >
               <a
@@ -101,7 +115,7 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7 }}
+              transition={{ delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
               className="mt-12 flex gap-10"
             >
               {[
@@ -121,40 +135,65 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* ── RIGHT: Chat Mockup ── */}
+          {/* ── RIGHT: Cinematic Chat Card ── */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{
+              duration: 0.9,
+              delay: 0.3,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="relative"
           >
+            {/* ✦ Signature amber glow orb — the "moment" */}
+            <div className="absolute -inset-8 -z-10 pointer-events-none">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] rounded-[40%] bg-gradient-to-br from-amber-400/20 via-amber-300/10 to-transparent blur-[60px] animate-pulse-glow" />
+              <div className="absolute top-[20%] right-[10%] w-[40%] h-[40%] rounded-full bg-amber-500/15 blur-[40px] animate-float-slow" />
+            </div>
+
             {/* Popular question pills */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.9 }}
+              transition={{ delay: 0.9, ease: [0.22, 1, 0.36, 1] }}
               className="hidden lg:flex flex-wrap gap-2 mb-4 justify-center"
             >
               {[
                 "Can I contest this fine?",
                 "What are my tenant rights?",
                 "Is this contract valid?",
-              ].map((q) => (
-                <div
+              ].map((q, i) => (
+                <motion.div
                   key={q}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-warm-200 text-[11px] text-navy-700 hover:border-amber-400 hover:text-amber-700 transition-colors cursor-pointer shadow-sm"
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1 + i * 0.1 }}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-sm border border-warm-200/80 text-[11px] text-navy-700 hover:border-amber-400 hover:text-amber-700 hover:shadow-md hover:shadow-amber-100/40 transition-all duration-300 cursor-pointer shadow-sm"
                 >
                   <ChevronRight className="w-3 h-3 text-amber-500" />
                   {q}
-                </div>
+                </motion.div>
               ))}
             </motion.div>
 
-            {/* Chat Card */}
-            <div className="card-navy p-0 overflow-hidden">
+            {/* Chat Card — with perspective and premium shadow */}
+            <motion.div
+              animate={{ y: [0, -6, 0] }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="card-navy p-0 overflow-hidden shadow-glow-navy"
+              style={{
+                transform: "perspective(1200px) rotateY(-2deg) rotateX(1deg)",
+              }}
+            >
               {/* Header */}
-              <div className="flex items-center justify-between px-5 py-3.5 border-b border-white/10">
+              <div className="flex items-center justify-between px-5 py-3.5 border-b border-white/[0.08]">
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-amber-500 flex items-center justify-center">
+                  <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center shadow-md shadow-amber-500/30">
                     <Bot className="w-4 h-4 text-white" />
                   </div>
                   <div>
@@ -168,9 +207,9 @@ export default function Hero() {
                   </div>
                 </div>
                 <div className="flex gap-1.5">
-                  <div className="w-2.5 h-2.5 rounded-full bg-white/15" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-white/15" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-white/15" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-white/10" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-white/10" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-white/10" />
                 </div>
               </div>
 
@@ -182,7 +221,7 @@ export default function Hero() {
                   transition={{ delay: 0.8 }}
                   className="flex justify-end"
                 >
-                  <div className="bg-amber-500/20 text-amber-200 px-4 py-2.5 rounded-2xl rounded-tr-sm text-sm max-w-[85%] leading-relaxed">
+                  <div className="bg-amber-500/20 text-amber-200 px-4 py-2.5 rounded-2xl rounded-tr-sm text-sm max-w-[85%] leading-relaxed border border-amber-500/10">
                     I received a fine I don&apos;t agree with. What should I do?
                   </div>
                 </motion.div>
@@ -193,7 +232,7 @@ export default function Hero() {
                   transition={{ delay: 1.2 }}
                   className="flex justify-start"
                 >
-                  <div className="bg-white/[0.08] px-4 py-3.5 rounded-2xl rounded-tl-sm max-w-[90%]">
+                  <div className="bg-white/[0.06] px-4 py-3.5 rounded-2xl rounded-tl-sm max-w-[90%] border border-white/[0.06]">
                     <p className="text-sm text-white/90 font-medium mb-2.5">
                       Here are the steps to contest your fine:
                     </p>
@@ -203,18 +242,21 @@ export default function Hero() {
                         "Gather supporting evidence",
                         "Submit a formal letter of representation",
                       ].map((step, i) => (
-                        <div
+                        <motion.div
                           key={step}
+                          initial={{ opacity: 0, x: -8 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: 1.4 + i * 0.15 }}
                           className="flex items-start gap-2.5 text-xs text-white/60"
                         >
                           <span className="w-5 h-5 rounded-md bg-amber-500/20 text-amber-300 flex items-center justify-center shrink-0 text-[10px] font-bold">
                             {i + 1}
                           </span>
                           {step}
-                        </div>
+                        </motion.div>
                       ))}
                     </div>
-                    <div className="mt-3 pt-2.5 border-t border-white/[0.08] flex items-center gap-2">
+                    <div className="mt-3 pt-2.5 border-t border-white/[0.06] flex items-center gap-2">
                       <div className="flex -space-x-1">
                         {[Gavel, Shield, Clock].map((Icon, i) => (
                           <div
@@ -236,22 +278,22 @@ export default function Hero() {
               {/* Input */}
               <div className="px-5 pb-4">
                 <div className="flex gap-2.5">
-                  <div className="flex-1 bg-white/[0.06] rounded-xl py-2.5 px-4 text-sm text-white/30">
+                  <div className="flex-1 bg-white/[0.05] rounded-xl py-2.5 px-4 text-sm text-white/30 border border-white/[0.05]">
                     Ask a legal question...
                   </div>
-                  <div className="w-10 h-10 rounded-xl bg-amber-500 flex items-center justify-center shrink-0 cursor-pointer hover:bg-amber-400 transition-colors">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center shrink-0 cursor-pointer hover:shadow-lg hover:shadow-amber-500/30 transition-all duration-300">
                     <ArrowRight className="w-4 h-4 text-white" />
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            {/* Trust */}
+            {/* Trust badges */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1.5 }}
-              className="mt-5 flex items-center justify-center gap-5"
+              transition={{ delay: 1.8 }}
+              className="mt-6 flex items-center justify-center gap-6"
             >
               {[
                 { Icon: Shield, text: "End-to-end encrypted" },
@@ -269,6 +311,9 @@ export default function Hero() {
           </motion.div>
         </div>
       </div>
+
+      {/* Signature glow line at bottom of hero */}
+      <div className="absolute bottom-0 left-0 right-0 glow-line" />
     </section>
   );
 }

@@ -2,6 +2,7 @@ import Navbar from "@/components/sections/Navbar";
 import Hero from "@/components/sections/Hero";
 import Problem from "@/components/sections/Problem";
 import Solution from "@/components/sections/Solution";
+import TrustBanner from "@/components/sections/TrustBanner";
 import WhoIsItFor from "@/components/sections/WhoIsItFor";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import EmotionalSection from "@/components/sections/EmotionalSection";
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <Problem />
       <Solution />
+      <TrustBanner />
       <WhyChooseUs />
       <WhoIsItFor />
       <EmotionalSection />
