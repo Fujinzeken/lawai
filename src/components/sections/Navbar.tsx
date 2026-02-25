@@ -40,8 +40,8 @@ export default function Navbar() {
             <Scale className="text-amber-400 w-5 h-5" />
           </div>
           <span className="text-xl font-heading font-bold tracking-tight text-navy-950">
-            {t("logo.law")}
-            <span className="text-amber-600">{t("logo.ai")}</span>
+            {t("logo.ai")}
+            <span className="text-amber-600">{t("logo.qonun")}</span>
           </span>
         </a>
 

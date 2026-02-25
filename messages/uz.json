@@ -8,8 +8,8 @@
       "faq": "Savollar"
     },
     "logo": {
-      "law": "Law",
-      "ai": "AI"
+      "ai": "ai",
+      "qonun": "qonun"
     },
     "cta": "Savol berish",
     "languages": {
@@ -48,7 +48,7 @@
         "q2": "Ijarachining qanday huquqlari bor?",
         "q3": "Ushbu shartnoma qanchalik qonuniy?"
       },
-      "headerName": "LawAI Yordamchisi",
+      "headerName": "aiqonun Yordamchisi",
       "headerStatus": "Onlayn",
       "userMessage": "Menga o'zim rozi bo'lmagan jarima keldi. Nima qilishim kerak?",
       "aiMessageTitle": "Jarimani bekor qilish bo'yicha qadamlar:",
@@ -90,7 +90,7 @@
     },
     "worseText": "Ba'zida kutish vaziyatni yanada og'irlashtiradi.",
     "footer": {
-      "title": "LawAI bilan siz javoblarni <span>{time}</span> ichida olasiz",
+      "title": "aiqonun bilan siz javoblarni <span>{time}</span> ichida olasiz",
       "time": "~30 soniya",
       "description": "Aniq, tizimli va O'zbekiston qonunchiligiga asoslangan.",
       "badges": {
@@ -130,7 +130,7 @@
   "Features": {
     "label": "Imkoniyatlar",
     "titlePrefix": "Nima uchun",
-    "titleSuffix": "LawAI?",
+    "titleSuffix": "aiqonun?",
     "description": "Darhol yuridik aniqlikka muhtoj insonlar uchun yaratilgan.",
     "items": {
       "f1": {
@@ -163,7 +163,7 @@
     "label": "Kimlar uchun",
     "titlePrefix": "Har bir",
     "titleSuffix": "inson uchun",
-    "description": "Xodim bo'lasizmi yoki biznes egasi, LawAI sizga aniqlik beradi.",
+    "description": "Xodim bo'lasizmi yoki biznes egasi, aiqonun sizga aniqlik beradi.",
     "items": {
       "p1": {
         "title": "Tadbirkorlar",
@@ -204,7 +204,7 @@
     "label": "FAQ",
     "titlePrefix": "Savollaringiz",
     "titleSuffix": " bormi?",
-    "description": "LawAI haqida ko'p beriladigan savollarga javoblar. Kerakli ma'lumotni topa olmadingizmi? Bizdan to'g'ridan-to'g'ri so'rang.",
+    "description": "aiqonun haqida ko'p beriladigan savollarga javoblar. Kerakli ma'lumotni topa olmadingizmi? Bizdan to'g'ridan-to'g'ri so'rang.",
     "card": {
       "title": "Hali ham savollaringiz bormi?",
       "description": "Bizning SI yordamchimiz 24/7 mavjud. Istalgan yuridik savolni bering va darhol aniq javob oling.",
@@ -213,7 +213,7 @@
     "items": {
       "q1": {
         "q": "Javoblar yuridik kuchga egami?",
-        "a": "LawAI amaldagi qonunchilikka asoslangan axborot xizmatini taqdim etadi. Bu qonunni tushunishga yordam bersa-da, sud ishlari uchun rasmiy yuridik maslahat o'rnini bosmaydi."
+        "a": "aiqonun amaldagi qonunchilikka asoslangan axborot xizmatini taqdim etadi. Bu qonunni tushunishga yordam bersa-da, sud ishlari uchun rasmiy yuridik maslahat o'rnini bosmaydi."
       },
       "q2": {
         "q": "Qanday turdagi savollarni berishim mumkin?",
@@ -229,7 +229,7 @@
       },
       "q5": {
         "q": "Bu mening mamlakatimda ishlaydimi?",
-        "a": "LawAI hozirda ma'lum yurisdiksiyalar qonunchiligini qamrab oladi. Biz qamrovni jadal kengaytirmoqdamiz — qo'llab-quvvatlanadigan hududlar ro'yxatini tekshirib turing."
+        "a": "aiqonun hozirda ma'lum yurisdiksiyalar qonunchiligini qamrab oladi. Biz qamrovni jadal kengaytirmoqdamiz — qo'llab-quvvatlanadigan hududlar ro'yxatini tekshirib turing."
       }
     }
   },
@@ -250,8 +250,8 @@
     "description": "Qonunni oddiy tilda tushuntirib beruvchi SI yordamchisi. 24/7 mavjud, maxfiy va doim dolzarb.",
     "product": "Mahsulot",
     "legal": "Yuridik ma'lumotlar",
-    "copyright": "© {year} LawAI. Barcha huquqlar himoyalangan.",
-    "disclaimer": "LawAI yuridik maslahat emas, balki huquqiy ma'lumot taqdim etadi. Majburiy yuridik masalalar bo'yicha har doim malakali advokat bilan maslahatlashing.",
+    "copyright": "© {year} aiqonun. Barcha huquqlar himoyalangan.",
+    "disclaimer": "aiqonun yuridik maslahat emas, balki huquqiy ma'lumot taqdim etadi. Majburiy yuridik masalalar bo'yicha har doim malakali advokat bilan maslahatlashing.",
     "links": {
       "features": "Imkoniyatlar",
       "howItWorks": "Qanday ishlaydi",
@@ -263,7 +263,7 @@
     }
   },
   "Metadata": {
-    "title": "LawAI — 24/7 ishlovchi huquqiy SI yordamchingiz",
+    "title": "aiqonun — 24/7 ishlovchi huquqiy SI yordamchingiz",
     "description": "O'zbekiston qonunchiligiga asoslangan yuridik savollarga darhol javob oling. Oddiy tilda, maxfiy va har doim mavjud."
   }
 }

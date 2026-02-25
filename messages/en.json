@@ -8,8 +8,8 @@
       "faq": "FAQ"
     },
     "logo": {
-      "law": "Law",
-      "ai": "AI"
+      "ai": "ai",
+      "qonun": "qonun"
     },
     "cta": "Ask Your Question",
     "languages": {
@@ -48,7 +48,7 @@
         "q2": "What are my tenant rights?",
         "q3": "Is this contract valid?"
       },
-      "headerName": "LawAI Assistant",
+      "headerName": "aiqonun Assistant",
       "headerStatus": "Online",
       "userMessage": "I received a fine I don't agree with. What should I do?",
       "aiMessageTitle": "Here are the steps to contest your fine:",
@@ -90,7 +90,7 @@
     },
     "worseText": "Sometimes waiting makes things worse.",
     "footer": {
-      "title": "With LawAI, you get answers in <span>{time}</span>",
+      "title": "With aiqonun, you get answers in <span>{time}</span>",
       "time": "~30 seconds",
       "description": "Clear, structured, based on Uzbekistan legislation.",
       "badges": {
@@ -130,7 +130,7 @@
   "Features": {
     "label": "Features",
     "titlePrefix": "Why choose",
-    "titleSuffix": "LawAI?",
+    "titleSuffix": "aiqonun?",
     "description": "Built for people who need real legal clarity, fast.",
     "items": {
       "f1": {
@@ -163,7 +163,7 @@
     "label": "Who it's for",
     "titlePrefix": "Made for",
     "titleSuffix": "everyone",
-    "description": "Whether you're an employee or a business owner, LawAI gives you clarity.",
+    "description": "Whether you're an employee or a business owner, aiqonun gives you clarity.",
     "items": {
       "p1": {
         "title": "Entrepreneurs",
@@ -204,7 +204,7 @@
     "label": "FAQ",
     "titlePrefix": "Got",
     "titleSuffix": "questions?",
-    "description": "Here are some common questions about LawAI. Can't find what you need? Just ask us directly.",
+    "description": "Here are some common questions about aiqonun. Can't find what you need? Just ask us directly.",
     "card": {
       "title": "Still have questions?",
       "description": "Our AI assistant is available 24/7. Ask any legal question and get an instant, clear answer.",
@@ -213,7 +213,7 @@
     "items": {
       "q1": {
         "q": "Is the advice legally valid?",
-        "a": "LawAI provides informational guidance based on current legislation. While it helps you understand the law, it does not replace formal legal counsel for court proceedings."
+        "a": "aiqonun provides informational guidance based on current legislation. While it helps you understand the law, it does not replace formal legal counsel for court proceedings."
       },
       "q2": {
         "q": "What type of questions can I ask?",
@@ -229,7 +229,7 @@
       },
       "q5": {
         "q": "Does it work in my country?",
-        "a": "LawAI currently covers legislation for select jurisdictions. We're expanding rapidly — check our supported regions for the latest coverage."
+        "a": "aiqonun currently covers legislation for select jurisdictions. We're expanding rapidly — check our supported regions for the latest coverage."
       }
     }
   },
@@ -250,8 +250,8 @@
     "description": "AI-powered legal assistant that explains the law in simple language. Available 24/7, confidential, and always up to date.",
     "product": "Product",
     "legal": "Legal",
-    "copyright": "© {year} LawAI. All rights reserved.",
-    "disclaimer": "LawAI provides legal information, not legal advice. Always consult a qualified attorney for binding legal matters.",
+    "copyright": "© {year} aiqonun. All rights reserved.",
+    "disclaimer": "aiqonun provides legal information, not legal advice. Always consult a qualified attorney for binding legal matters.",
     "links": {
       "features": "Features",
       "howItWorks": "How It Works",
@@ -263,7 +263,7 @@
     }
   },
   "Metadata": {
-    "title": "LawAI — Your 24/7 AI Legal Assistant",
+    "title": "aiqonun — Your 24/7 AI Legal Assistant",
     "description": "Get instant answers to your legal questions based on Uzbekistan legislation. Simple language, confidential, and always available."
   }
 }
